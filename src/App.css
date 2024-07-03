@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+
+:root { 
+--Blue: hsl(246, 80%, 60%);
+--Light-red-work: hsl(15, 100%, 70%);
+--Soft-blue-play: hsl(195, 74%, 62%);
+--Light-red-study: hsl(348, 100%, 68%);
+--Lime-green-exercise: hsl(145, 58%, 55%);
+--Violet-social: hsl(264, 64%, 52%);
+--Soft-orange-self-care: hsl(43, 84%, 65%);
+/*### Neutral*/
+--Very-dark-blue: hsl(226, 43%, 10%);
+--Dark-blue: #1c1f4a;
+--Desaturated-blue: hsl(235, 45%, 61%);
+--Pale-Blue: hsl(236, 100%, 87%);
+}
+
+body {
+  background-color: #0d1323;
+}
+
+
+body, button {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  color:  var(--Pale-Blue);
+}
+
+button:active {
+  color:#fff;
+}
+
+
+h2 {
+  font-weight:500 ;
+}
+
+h3 {
+  font-weight:200;
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: 331px;
+  grid-template-rows: 2fr;
+  row-gap: 25px;
+  grid-template-areas: 'main' 'card1' 'card2' 'card3' 'card4' 'card5' 'card6';
+  margin: 25px 0;
+  justify-content: center;
+}
+
+
+/*Control--card */
+
+.Control--card {
+  grid-area: main;
+  height: 159px;
+  background-color: var(--Dark-blue);
+  border-radius: 10px;
+}
+
+.profile--zone {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em 1.5em;
+  width: 331px;
+  height: 65%;
+  border-radius: 10px;
+  background-color: var(--Blue);
+}
+
+.center {
+  line-height: 25px;
+  align-self: center;
+}
+
+.center h1, .center span {
+  color: #fff;
+}
+
+.center h1 {
+  font-size: 0.7em;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.center span {
+  font-size: 1.2em;
+}
+
+.Control--card .profile--zone img {
+  width: 70px;
+  border: 2px #fff solid;
+  border-radius: 50px;
+  margin-right: 14px;
+}
+
+.controll-zone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em 1.4em;
+}
+
+.card {
+  position: relative;
+  left: 0;
+  height: 159px;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 0.4em 0;
+}
+
+/*Card bg and limite */
+.limite {
+  overflow: hidden;
+}
+
+.bg {
+  position: relative;
+  top: -11px;
+  right: -245px;
+}
+
+
+/*subCard */
+
+.subCard {
+  position: absolute;
+  top: 30%;
+  width: 331px;
+  height: 122px;
+  background-color:var(--Dark-blue);
+  border-radius: 10px;
+  padding: 2em 1em;
+}
+
+/*card e grid area color*/
+.card1 {
+  grid-area: card1;
+  background-color: var(--Light-red-work);
+}
+
+.card2 {
+  grid-area: card2;
+   background-color:var(--Soft-blue-play) ;
+} 
+
+.card3 {
+  grid-area: card3;
+   background-color: var(--Light-red-study);
+} 
+
+.card4 {
+  grid-area: card4;
+  background-color: var(--Lime-green-exercise);
+} 
+
+.card5 {
+  grid-area: card5;
+  background-color: var(--Violet-social);
+} 
+
+.card6 {
+  grid-area: card6;
+  background-color: var(--Soft-orange-self-care);
+} 
+
+/*row style*/
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.row1 {
+  margin-bottom: 1em;
+}
+
+.row .hours {
+  animation: load ease-in 1s;
+  font-size: 2em;
+}
+
+.row  > .weeks-hours {
+  color: var(--Pale-Blue);
+  opacity: 0.5;
+}
+
+
+
+@media (min-width:1000px) {
+ 
+
+  .Container {
+    display: grid;
+    grid-template-columns: 330px;
+    grid-template-rows: 2fr;
+    gap: 20px;   
+    grid-template-areas: 'main card1 card2 card3' 'main card4 card5 card6';
+    margin: 75px auto;
+    justify-content: center;
+  }
+ 
+
+  
+
+  .card {
+    width: 258px;
+    height: 240px;
+    margin: 0;
+  }
+
+  .subCard {
+    position: absolute;
+    top: 15%;
+    width: 258px;
+    height: 205px;
+    padding: 1em 0.9em;
+  }
+
+  
+
+  .row1 {
+    margin: 0.5em 0;
+  }
+
+
+  .row2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  .row2 .hours {
+    font-size: 2.7em;
+    margin-top: 0.5em;
+    margin-bottom: 0.4em;
+  }
+
+
+  .bg {
+    position: relative;
+    top: -7px;
+    right: -167px;
+  }
+
+  .profile--zone {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 258px;
+    height: 65%;
+    border-radius: 10px;
+    background-color: var(--Blue);
+  }
+
+  
+  
+  .Control--card {
+    margin-left: 60px;
+    grid-area: main;
+    width: 258px;
+    height: 510px;
+  }
+
+  .Control--card .profile--zone img {
+    margin-top: 25px;
+  }
+
+  .center {
+    margin-top: 30px;
+    line-height: 27px;
+    align-self: flex-start;
+  }
+
+  .center h1 {
+    font-size: 1em;
+  }
+  
+  .center span {
+    line-height: 47px;
+    font-size: 2em;
+  }
+  
+  .controll-zone {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1em 0;
+  }
+
+  .controll-zone > button {
+    margin: 0.5em 0;
+  }
+
+  .card1 {
+    grid-area: card1;
+  }
+  
+  .card2 {
+    grid-area: card2;
+  } 
+  
+  .card3 {
+    grid-area: card3;
+  } 
+  
+  .card4 {
+    grid-area: card4;
+  } 
+  
+  .card5 {
+    grid-area: card5;
+  } 
+  
+  .card6 {
+    grid-area: card6;
+  } 
+  
+  
+  
+
+
+  
+}
+
+@media (min-width:1440px) {
+  .Container {
+    margin: 175px auto;
+  }
+} 
